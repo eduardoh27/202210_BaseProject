@@ -34,7 +34,7 @@ export class BandaListComponent implements OnInit {
     for (let banda of bandas) {
       suma += banda.numberOfMembers;
     }
-    return suma / bandas.length;
+    return Math.ceil(suma / bandas.length);
   }
 
   ngOnInit() {
