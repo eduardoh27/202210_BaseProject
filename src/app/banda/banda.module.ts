@@ -9,8 +9,8 @@ import { BandaDetailComponent } from './banda-detail/banda-detail.component';
   imports: [
     CommonModule,FormsModule
   ],
-  declarations: [BandaListComponent,BandaDetailComponent],
+  declarations: [BandaListComponent, BandaDetailComponent],
   exports: [BandaListComponent],
   providers: [BandaService]
 })
-export class SerieModule { }
+export class BandaModule { }

@@ -1,18 +1,19 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BandaComponent } from './banda/banda.component';
+import { BandaModule } from './banda/banda.module';
+
 
 @NgModule({
-  declarations: [	
-    AppComponent,
-      BandaComponent
+  declarations: [
+    AppComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    BandaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

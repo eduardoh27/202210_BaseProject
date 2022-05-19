@@ -1,3 +1,37 @@
-<p>
-  banda-list works!
-</p>
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead class="table-light">
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Number of members</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr (click)="onSelected(banda)" *ngFor="let banda of Bandas">
+
+          <td>{{ banda.id }}</td>
+          <td>{{ banda.name }}</td>
+          <td>{{ banda.numberOfMembers }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <tr>
+      Seasons average
+      {{
+        promedio
+      }}
+    </tr>
+
+  </div>
+
+    <div class="col-sm-4">
+      <div *ngIf="activate">
+        <app-banda-detail [selectedBanda]="selectedBanda" ></app-banda-detail>
+      </div>
+    </div>
+
+
+</div>
+
